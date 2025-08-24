@@ -16,10 +16,6 @@ class InputText(BaseModel):
 def home():
     return {"message": "API de mi modelo funcionando 🚀"}
 
-@app.get("/porras")
-def home():
-    return {"message": "hola porras"}
-
 @app.post("/predict")
 def predict(data: InputText):
     result = model(data.text)
